@@ -14,12 +14,25 @@
         <input type="button" value="2 Players" id="double-player" >
     </div>
     <dialog data-modal>
-        <input type="text" name="player-1" id="player-1-name" placeholder="Player 1 Name" required>
-        <input type="text" name="player-2" id="player-2-name" placeholder="Player 2 Name" required>
-        <input type="button" value="Start Game" id="start-game">
+        <form>
+            <input type="text" name="player-1" id="player-1-name" placeholder="Player X Name" required>
+            <input type="text" name="player-2" id="player-2-name" placeholder="Player O Name" required>
+            <input type="button" value="Start Game" id="start-game">
+        </form>
     </dialog>
     
     <div class="game-container" style="display: none;">
+        <div class="game-details">
+            <div class="player-1-details">
+                <p id="player-1-score"></p>
+            </div>
+            <div class="draws">
+                <p id="draw-score"></p>
+            </div>
+            <div class="player-2-details">
+                <p id="player-2-score"></p>
+            </div>
+        </div>
         <div class="game-board">
             <div class="cells" cell-index="1"></div>
             <div class="cells" cell-index="2"></div>
@@ -31,6 +44,13 @@
             <div class="cells" cell-index="8"></div>
             <div class="cells" cell-index="9"></div>
         </div>
+
+        <dialog id="show-winner">
+            <h1></h1>
+            <input type="button" value="Play again" id="repeat">
+            <input type="button" value="End game" id="end-game">  
+        </dialog>
+
     </div>
 </body>
 </html>

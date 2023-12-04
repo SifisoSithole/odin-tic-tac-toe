@@ -36,7 +36,23 @@ dialog {
     width: clamp(250px, 80%, 500px);;
 }
 
-input[type=button], input[type=text] {
+dialog > form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#show-winner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #14EFFF;
+}
+
+input[type=button],
+input[type=text] {
     font-size: 18px;
     width: 80%;
     height: 50px;
@@ -48,15 +64,17 @@ input[type=button], input[type=text] {
     box-shadow: 0 4px 8px rgba(20, 239, 255, 0.4);
 }
 
+input[type=text] {
+    cursor: default;
+}
+
 input[type=button]:hover {
     background-color: #14EFFF;
     color: #202020;
 }
 
 .game-container {
-    border: 5px solid #202020;
     width: clamp(250px, 80%, 500px);
-    
 }
 
 .game-board {
@@ -75,4 +93,19 @@ input[type=button]:hover {
     font-size: 5rem;
     cursor: pointer;
     border: #000 2px solid;
+}
+
+.game-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.player-1-details,
+.player-2-details,
+.draws {
+    background-color: #FFF;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 20px;
 }
